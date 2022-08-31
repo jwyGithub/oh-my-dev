@@ -30,18 +30,18 @@ cp /etc/yum.repos.d/CentOS-$release-AppStream.repo /etc/yum.repos.d/CentOS-$rele
 # remove base_os
 rm -rf /etc/yum.repos.d/CentOS-$release-BaseOS.repo
 
-# append base_os for aliyun
-echo "$(curl https://raw.githubusercontent.com/jwyGithub/CentOS/main/repo/CentOS-Stream-BaseOS.repo)" >> /etc/yum.repos.d/CentOS-$release-BaseOS.repo
-
 # remove app_stream
 rm -rf /etc/yum.repos.d/CentOS-$release-AppStream.repo
+
+# append base_os for aliyun
+echo "$(curl https://raw.githubusercontent.com/jwyGithub/CentOS/main/repo/CentOS-Stream-BaseOS.repo)" >> /etc/yum.repos.d/CentOS-$release-BaseOS.repo
 
 # append app_stream for aliyun
 echo "$(curl https://raw.githubusercontent.com/jwyGithub/CentOS/main/repo/CentOS-Stream-AppStream.repo)" >> /etc/yum.repos.d/CentOS-$release-AppStream.repo
 
 
 # cache
-yum makecache -y
+yum makecache
 
 # install epel-release
 yum install epel-release -y

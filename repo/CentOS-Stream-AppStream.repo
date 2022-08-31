@@ -8,7 +8,7 @@
 # If the mirrorlist does not work for you, you can try the commented out
 # baseurl line instead.
 
-[appstream]
+[AppStream]
 name=CentOS-8.5.2111 - AppStream - mirrors.aliyun.com
 baseurl=http://mirrors.aliyun.com/centos-vault/8.5.2111/AppStream/$basearch/os/
         http://mirrors.aliyuncs.com/centos-vault/8.5.2111/AppStream/$basearch/os/
