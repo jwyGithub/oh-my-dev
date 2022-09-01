@@ -1,14 +1,20 @@
 # CentOS
-my CentOS init config.
 
-## update mirrorlist to aliyun
+centos config
+
+## remote mode
+
 ```sh
-wget -O- https://raw.githubusercontent.com/jwyGithub/CentOS/main/repo.sh | sh
+wget -O- https://raw.githubusercontent.com/jwyGithub/CentOS/main/remote/repo.sh | sh
 ```
 
-## local
-```sh
-node repo/index.js
+## local mode
 
-curl http://localhost:8090/repo-local | sh
+```sh
+git clone https://github.com/jwyGithub/CentOS.git
+
+node bin/index.js
+
+copy cmd
 ```
+
