@@ -18,7 +18,6 @@ else
     ip=$ip
 fi
 
-echo $ip
 
 centos_linux="CentOS Linux"
 centos_stream="CentOS Stream"
@@ -38,38 +37,46 @@ echo AppStream file is : $app_stream
 
 
 # base_os_backup
-base_os_backup=/etc/yum.repos.d/CentOS-$release-BaseOS.repo.backup
+base_os_backup=$base_os.backup
 
 # stream_backup
-stream_backup=/etc/yum.repos.d/CentOS-$release-AppStream.repo.backup
+stream_backup=$app_stream.backup
 
-if [ ! -f "$base_os_backup" ]; then
+# base_os file
+base_os_file=$base_os
+
+# stream_file
+stream_file=$app_stream
+
+if [ ! -f "$base_os_backup" && -f $base_os_file ]; then
 # backup base_os
-cp /etc/yum.repos.d/CentOS-$release-BaseOS.repo /etc/yum.repos.d/CentOS-$release-BaseOS.repo.backup
+cp $base_os_file /etc/yum.repos.d/$base_os_backup.backup
 fi
 
 
-if [ ! -f "$stream_backup" ]; then
+if [ ! -f "$stream_backup" && -f $stream_file]; then
 # backup app_stream
-cp /etc/yum.repos.d/CentOS-$release-AppStream.repo /etc/yum.repos.d/CentOS-$release-AppStream.repo.backup
+cp $stream_file /etc/yum.repos.d/$stream_backup.backup
 fi
 
-
+if ([ -f $base_os_file ]) 
+then
 # remove base_os
-rm -rf /etc/yum.repos.d/CentOS-$release-BaseOS.repo
+rm -f $base_os_file
+fi
 
+if ([ -f $stream_file ]) 
+then
 # remove app_stream
-rm -rf /etc/yum.repos.d/CentOS-$release-AppStream.repo
+rm -r $stream_file
+fi
+
 
 # append base_os for aliyun
 echo "$(curl http://$ip:$port/base_os)" >> /etc/yum.repos.d/CentOS-$release-BaseOS.repo
 
 # append app_stream for aliyun
 echo "$(curl http://$ip:$port/stream)" >> /etc/yum.repos.d/CentOS-$release-AppStream.repo
-
-
-# cache
-yum makecache
 
 # install epel-release
 yum install epel-release -y

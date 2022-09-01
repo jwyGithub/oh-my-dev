@@ -1,6 +1,6 @@
-# CentOS
+# my development configuration
 
-centos config
+## CentOS
 
 ## remote mode
 
@@ -13,7 +13,7 @@ wget -O- https://raw.githubusercontent.com/jwyGithub/CentOS/main/remote/repo.sh 
 ```sh
 git clone https://github.com/jwyGithub/CentOS.git
 
-node bin/index.js
+node centos/bin/index.js
 
 copy cmd
 ```
