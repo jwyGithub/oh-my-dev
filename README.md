@@ -2,20 +2,8 @@
 
 ## CentOS
 
-1. remote mode
-
 ```sh
-wget -O- https://raw.githubusercontent.com/jwyGithub/CentOS/main/remote/repo.sh | sh
-```
-
-2. local mode
-
-```sh
-git clone https://github.com/jwyGithub/CentOS.git
-
-node centos/bin/index.js
-
-copy cmd
+wget -O- https://cdn.jsdelivr.net/gh/jwyGithub/oh-my-dev/centos/repo.sh | sh
 ```
 
 ## zsh
@@ -54,7 +42,7 @@ vim ~/.zshrc
 ZSH_THEME="jwy"
 
 git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
-git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions  
+git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
 ```
 
 5. load ~/.zshrc

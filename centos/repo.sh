@@ -34,10 +34,10 @@ rm -rf /etc/yum.repos.d/CentOS-$release-BaseOS.repo
 rm -rf /etc/yum.repos.d/CentOS-$release-AppStream.repo
 
 # append base_os for aliyun
-echo "$(curl https://raw.githubusercontent.com/jwyGithub/CentOS/main/repo/CentOS-Stream-BaseOS.repo)" >> /etc/yum.repos.d/CentOS-$release-BaseOS.repo
+echo "$(curl https://cdn.jsdelivr.net/gh/jwyGithub/oh-my-dev/centos/repo/CentOS-Stream-BaseOS.repo)" >> /etc/yum.repos.d/CentOS-$release-BaseOS.repo
 
 # append app_stream for aliyun
-echo "$(curl https://raw.githubusercontent.com/jwyGithub/CentOS/main/repo/CentOS-Stream-AppStream.repo)" >> /etc/yum.repos.d/CentOS-$release-AppStream.repo
+echo "$(curl https://cdn.jsdelivr.net/gh/jwyGithub/oh-my-dev/centos/repo/CentOS-Stream-AppStream.repo)" >> /etc/yum.repos.d/CentOS-$release-AppStream.repo
 
 
 # cache
