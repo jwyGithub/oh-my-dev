@@ -133,3 +133,9 @@ systemctl restart firewalld.service
 firewall-cmd --list-ports
 ```
 
+-   重新注册证书
+
+```sh
+~/.acme.sh/acme.sh --renew -d xx.xxx --force
+~/.acme.sh/acme.sh --installcert -d xx.xx --key-file ~/x-ui/cert/private.key --fullchain-file ~/x-ui/cert/cert.crt
+```
