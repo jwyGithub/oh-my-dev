@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # 定义新的主题值
-jwy_theme='ZSH_THEME="jwy"'
+jwy_theme='ZSH_THEME="jwy1"'
 
 # 设置 .zshrc 文件路径
 zshrc_file="$HOME/.zshrc"
