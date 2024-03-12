@@ -34,13 +34,13 @@ brew install zsh
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 ```
 
-3. append alias to ~/.zshrc
+3. install dev-zsh.sh
 
 ```sh
-echo "$(curl https://raw.githubusercontent.com/jwyGithub/oh-my-dev/main/zsh/alias.zsh)" >> ~/.zshrc
+    sh -c "$(curl -fsSL https://raw.githubusercontent.com/jwyGithub/oh-my-dev/main/zsh/dev-zsh.sh)"
 ```
 
-4. append proxy to ~/.zshrc
+. append proxy to ~/.zshrc
 
 > macos
 
@@ -52,29 +52,6 @@ echo "$(curl https://raw.githubusercontent.com/jwyGithub/oh-my-dev/main/zsh/prox
 
 ```sh
 echo "$(curl https://raw.githubusercontent.com/jwyGithub/oh-my-dev/main/zsh/proxy/linux.zsh)" >> ~/.zshrc
-```
-
-5. append theme to ~/.oh-my-zsh/themes/
-
-```sh
-curl -O https://raw.githubusercontent.com/jwyGithub/oh-my-dev/main/zsh/theme/jwy.zsh-theme
-mv jwy.zsh-theme ~/.oh-my-zsh/themes/
-```
-
-6. set theme ~/.zshrc
-
-```sh
-sh -c "$(curl -fsSL https://raw.githubusercontent.com/jwyGithub/oh-my-dev/main/zsh/dev-zsh.sh)"
-
-git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
-git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
-
-```
-
-5. load ~/.zshrc
-
-```sh
-source ~/.zshrc
 ```
 
 ## VPS
