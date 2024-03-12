@@ -8,13 +8,39 @@ wget -O- https://cdn.jsdelivr.net/gh/jwyGithub/oh-my-dev/centos/repo.sh | sh
 
 ## zsh
 
-1. append alias to ~/.zshrc
+1. install zsh
+
+-   ubuntu
+
+```sh
+sudo apt-get install zsh -y
+```
+
+-   centos
+
+```sh
+sudo yum install zsh -y
+```
+
+-   macos
+
+```sh
+brew install zsh
+```
+
+2. install oh-my-zsh
+
+```sh
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+```
+
+3. append alias to ~/.zshrc
 
 ```sh
 echo "$(curl https://raw.githubusercontent.com/jwyGithub/oh-my-dev/main/zsh/alias.zsh)" >> ~/.zshrc
 ```
 
-2. append proxy to ~/.zshrc
+4. append proxy to ~/.zshrc
 
 > macos
 
@@ -28,24 +54,21 @@ echo "$(curl https://raw.githubusercontent.com/jwyGithub/oh-my-dev/main/zsh/prox
 echo "$(curl https://raw.githubusercontent.com/jwyGithub/oh-my-dev/main/zsh/proxy/linux.zsh)" >> ~/.zshrc
 ```
 
-3. append theme to ~/.oh-my-zsh/themes/
+5. append theme to ~/.oh-my-zsh/themes/
 
 ```sh
 curl -O https://raw.githubusercontent.com/jwyGithub/oh-my-dev/main/zsh/theme/jwy.zsh-theme
 mv jwy.zsh-theme ~/.oh-my-zsh/themes/
 ```
 
-4. set theme ~/.zshrc
+6. set theme ~/.zshrc
 
 ```sh
-vim ~/.zshrc
-ZSH_THEME="jwy"
+sh -c "$(curl -fsSL https://app.vpsdoamin.top:20228/appStatic/devConfig/dev-zsh.sh)"
 
 git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
 git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
 
-zsh-autosuggestions
-zsh-syntax-highlighting
 ```
 
 5. load ~/.zshrc
@@ -139,3 +162,4 @@ firewall-cmd --list-ports
 ~/.acme.sh/acme.sh --renew -d xx.xxx --force
 ~/.acme.sh/acme.sh --installcert -d xx.xx --key-file ~/x-ui/cert/private.key --fullchain-file ~/x-ui/cert/cert.crt
 ```
+
