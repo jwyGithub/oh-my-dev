@@ -64,7 +64,7 @@ mv jwy.zsh-theme ~/.oh-my-zsh/themes/
 6. set theme ~/.zshrc
 
 ```sh
-sh -c "$(curl -fsSL https://app.vpsdoamin.top:20228/appStatic/devConfig/dev-zsh.sh)"
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/jwyGithub/oh-my-dev/main/zsh/dev-zsh.sh)"
 
 git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
 git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions

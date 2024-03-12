@@ -8,3 +8,5 @@ zshrc_file="$HOME/.zshrc"
 
 # 使用 sed 命令将匹配到的行替换为新值
 sed -i "s/^ZSH_THEME=.*/$jwy_theme/" "$zshrc_file"
+
+echo "主题已经修改为 jwy"
