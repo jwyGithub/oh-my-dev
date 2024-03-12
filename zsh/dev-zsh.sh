@@ -2,7 +2,7 @@
 
 # 定义高亮输出函数
 highlight_echo() {
-    echo -e "\e[1;32m$1\e[0m"
+    echo "\e[1;32m$1\e[0m"
 }
 
 # 定义新的主题值
