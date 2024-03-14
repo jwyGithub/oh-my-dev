@@ -45,7 +45,5 @@ sed -i 's/^plugins=(/plugins=(zsh-syntax-highlighting zsh-autosuggestions /' "$z
 
 highlight_echo "已修改 .zshrc 文件中的插件列表"
 
-# 立即生效 .zshrc 文件的修改
-. "$zshrc_file"
-
-highlight_echo "已重新加载 .zshrc 文件"
+# 切换到新的 zsh 环境
+exec zsh

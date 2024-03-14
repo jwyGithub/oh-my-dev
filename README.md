@@ -40,7 +40,7 @@ sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/too
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/jwyGithub/oh-my-dev/main/zsh/dev-zsh.sh)"
 ```
 
-. append proxy to ~/.zshrc
+4. append proxy to ~/.zshrc
 
 > macos
 
@@ -52,6 +52,13 @@ echo "$(curl https://raw.githubusercontent.com/jwyGithub/oh-my-dev/main/zsh/prox
 
 ```sh
 echo "$(curl https://raw.githubusercontent.com/jwyGithub/oh-my-dev/main/zsh/proxy/linux.zsh)" >> ~/.zshrc
+```
+
+## node
+
+```sh
+
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/jwyGithub/oh-my-dev/main/node/install.sh)"
 ```
 
 ## VPS
