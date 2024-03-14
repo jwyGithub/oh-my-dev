@@ -22,7 +22,7 @@ fi
 
 # 安装 nvm
 echo "${YELLOW}nvm is not installed. Installing nvm...${NC}"
-curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.7/install.sh | bash
+curl -s -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.7/install.sh | bash
 
 # 设置 nvm 相关环境变量和加载 nvm.sh
 export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || printf %s "${XDG_CONFIG_HOME}/nvm")"
