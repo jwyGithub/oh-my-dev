@@ -21,8 +21,16 @@ curl -s -o ~/.oh-my-zsh/themes/jwy.zsh-theme https://raw.githubusercontent.com/j
 
 highlight_echo "已下载并移动 jwy 主题文件到 ~/.oh-my-zsh/themes/"
 
-# 使用 curl 下载别名配置文件并追加到 .zshrc 文件
-curl -s https://raw.githubusercontent.com/jwyGithub/oh-my-dev/main/zsh/alias.zsh >> ~/.zshrc
+# # 使用 curl 下载别名配置文件并追加到 .zshrc 文件
+# curl -s https://raw.githubusercontent.com/jwyGithub/oh-my-dev/main/zsh/alias.zsh >> ~/.zshrc
+
+# 添加functions目录
+curl -s https://raw.githubusercontent.com/jwyGithub/oh-my-dev/main/zsh/functions/common.zsh > ~/.zsh_functions/common.zsh
+curl -s https://raw.githubusercontent.com/jwyGithub/oh-my-dev/main/zsh/functions/git.zsh > ~/.zsh_functions/git.zsh
+curl -s https://raw.githubusercontent.com/jwyGithub/oh-my-dev/main/zsh/functions/maven.zsh > ~/.zsh_functions/maven.zsh
+curl -s https://raw.githubusercontent.com/jwyGithub/oh-my-dev/main/zsh/functions/node.zsh > ~/.zsh_functions/node.zsh
+curl -s https://raw.githubusercontent.com/jwyGithub/oh-my-dev/main/zsh/functions/python.zsh > ~/.zsh_functions/python.zsh
+curl -s https://raw.githubusercontent.com/jwyGithub/oh-my-dev/main/zsh/functions/ruby.zsh > ~/.zsh_functions/ruby.zsh
 
 highlight_echo "已追加别名配置到 .zshrc 文件"
 
