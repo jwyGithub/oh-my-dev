@@ -147,3 +147,8 @@ firewall-cmd --list-ports
 ~/.acme.sh/acme.sh --installcert -d xx.xx --key-file ~/x-ui/cert/private.key --fullchain-file ~/x-ui/cert/cert.crt
 ```
 
+-   wsl 端口转发
+
+```sh
+netsh interface portproxy add v4tov4 listenport=80 listenaddress=0.0.0.0 connectport=80 connectaddress=1.1.1.1
+```
