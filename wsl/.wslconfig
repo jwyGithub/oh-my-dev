@@ -1,0 +1,9 @@
+[wsl2]
+networkingMode = mirrored
+dnsTunneling = true
+firewall = true
+autoProxy = true
+
+[experimental]
+sparseVhd = true 
+autoMemoryReclaim = disabled
