@@ -69,7 +69,7 @@ function install_socat() {
 
 # 安装acme.sh
 function install_acme() {
-    if ! command -v acme.sh &> /dev/null; then
+    if [ ! -f "$HOME/.acme.sh/acme.sh" ] || [ ! -x "$HOME/.acme.sh/acme.sh" ]; then
         log_info "正在安装acme.sh..."
         if curl https://get.acme.sh | sh; then
             log_success "acme.sh安装成功"
@@ -79,6 +79,8 @@ function install_acme() {
         fi
     else
         log_info "acme.sh已安装，跳过"
+        # 显示已安装的acme.sh版本
+        log_info "当前安装的acme.sh版本: $($HOME/.acme.sh/acme.sh --version | head -n 2 | tail -n 1)"
     fi
 
     # 切换证书生成方式为letsencrypt
